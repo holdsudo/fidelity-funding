@@ -1,0 +1,47 @@
+<button class="ai-fab" type="button" id="ai-fab" aria-label="Open Fidelity AI assistant" aria-controls="ai-panel" aria-expanded="false">
+  <span class="ai-fab__orb">{{i:sparkles}}</span><span class="ai-fab__label">Ask Fidelity AI</span>
+</button>
+<div class="ai-nudge" id="ai-nudge" role="status"><button type="button" aria-label="Dismiss">{{i:x}}</button>👋 Hi! I can estimate your funding options in under a minute. Want to try?</div>
+<section class="ai-panel" id="ai-panel" role="dialog" aria-modal="false" aria-label="Fidelity AI assistant">
+  <header class="ai-head">
+    <span class="ai-fab__orb">{{i:sparkles}}</span>
+    <div><b>Fidelity AI</b><small>Funding assistant · online</small></div>
+    <div class="ai-head__btns">
+      <button type="button" id="ai-reset" aria-label="New conversation" title="New conversation">{{i:refresh}}</button>
+      <button type="button" id="ai-close" aria-label="Close assistant">{{i:x}}</button>
+    </div>
+  </header>
+  <div class="ai-body" id="ai-body" aria-live="polite">
+    <div class="ai-welcome" id="ai-welcome">
+      <span class="ai-fab__orb">{{i:sparkles}}</span>
+      <h3>How can I help you grow?</h3>
+      <p>Ask about funding options, timelines, eligibility or your application.</p>
+      <div class="ai-sugg">
+        <button type="button" data-ask="How fast can I get funded?">{{i:bolt}} How fast can I get funded?</button>
+        <button type="button" data-ask="Will applying affect my credit score?">{{i:shield}} Will applying affect my credit?</button>
+        <button type="button" data-ask="What's the difference between a loan and a merchant cash advance?">{{i:scale}} Loan vs. merchant cash advance</button>
+        <button type="button" data-ask="I need $75,000 for equipment">{{i:dollar}} I need $75,000 for equipment</button>
+      </div>
+    </div>
+  </div>
+  <div class="ai-quick" id="ai-quick">
+    <button type="button" data-ask="What documents do I need?">Documents needed</button>
+    <button type="button" data-ask="Who do you work with?">Industries</button>
+    <button type="button" data-ask="Talk to a person">Talk to a human</button>
+    <button type="button" data-ask="Start my application">Start application</button>
+  </div>
+  <form class="ai-input" id="ai-form">
+    <label class="sr-only" for="ai-text">Message Fidelity AI</label>
+    <textarea id="ai-text" rows="1" placeholder="Ask about business funding…"></textarea>
+    <button type="button" class="ai-mic" id="ai-mic" aria-label="Speak your question" hidden>{{i:mic}}</button>
+    <button type="submit" class="ai-send" id="ai-send" aria-label="Send" disabled>{{i:send}}</button>
+  </form>
+  <div class="ai-foot">Fidelity AI gives general information, not financial advice.</div>
+</section>
+<div class="cmdk" id="cmdk" role="dialog" aria-modal="true" aria-label="Search and ask">
+  <div class="cmdk__box">
+    <div class="cmdk__in">{{i:search}}<input id="cmdk-input" type="text" placeholder="Search pages or ask Fidelity AI…" autocomplete="off" aria-label="Search"><kbd>esc</kbd></div>
+    <div class="cmdk__list" id="cmdk-list" role="listbox"></div>
+  </div>
+</div>
+<div class="toast" id="toast" role="status">{{i:check-circle}}<span></span></div>

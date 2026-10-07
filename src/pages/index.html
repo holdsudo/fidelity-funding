@@ -1,0 +1,351 @@
+<!--{"title":"Fidelity Funding — Fast & Easy Business Funding, No Credit Impact","desc":"Fidelity Funding connects your business with the nation's top lenders. Decisions in hours, funding often within 24 hours. Small business loans, merchant cash advances and credit card processing.","nav":"home","head":"<link rel=\"preload\" as=\"image\" href=\"/assets/img/hero-rhino.webp\" media=\"(min-width:961px)\">"}-->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero__bg" aria-hidden="true">
+    <div class="aurora"><i></i><i></i><i></i><i></i></div>
+    <div class="hero__grid"></div>
+    <canvas class="hero__canvas" id="hero-canvas"></canvas>
+    <div class="hero__noise"></div>
+  </div>
+  <div class="container">
+    <div class="hero__inner">
+      <div class="hero__copy">
+        <span class="hero__pill fade-up"><b>{{i:bolt}} Fast</b> Decisions in hours · funding often in 24h</span>
+        <h1 class="display" id="hero-title">
+          <span class="line"><span>Your Business.</span></span>
+          <span class="line"><span class="grad-text">Your Future.</span></span>
+        </h1>
+        <p class="hero__sub fade-up d2">Whether you’re expanding, upgrading, or stabilizing your cash flow, Fidelity Funding connects you with the nation’s top lenders — all in one place.</p>
+        <div class="hero__ctas fade-up d3">
+          <a class="btn btn--primary btn--lg btn--glow" href="/apply/">Get Funded {{i:arrow}}</a>
+          <a class="btn btn--ghost-dark btn--lg" href="#how">See how it works</a>
+        </div>
+        <div class="hero__assure fade-up d4">
+          <span>{{i:shield}} No impact on credit</span>
+          <span>{{i:clock}} 5-minute application</span>
+          <span>{{i:users}} Real specialists</span>
+        </div>
+      </div>
+
+      <div class="fade-up d3"><div class="fund-card" id="fund-card" data-amount="250000" data-purpose="growth">
+        <div class="fund-card__top"><span>Funding amount</span><span class="live-dot">Specialists online</span></div>
+        <div class="fund-card__amount" id="amount-out" aria-live="polite">$250,000</div>
+        <div class="fund-card__label">Slide to choose how much your business needs</div>
+        <div class="range">
+          <div class="range__track"></div>
+          <label class="sr-only" for="amount">Funding amount</label>
+          <input type="range" id="amount" min="0" max="20" step="1" value="14">
+        </div>
+        <div class="range__ticks" aria-hidden="true"><span>$5K</span><span>$1M</span></div>
+        <div class="chip-row" aria-label="Quick amounts">
+          <button class="chip" type="button" data-amt="50000" aria-pressed="false">$50K</button>
+          <button class="chip" type="button" data-amt="100000" aria-pressed="false">$100K</button>
+          <button class="chip" type="button" data-amt="500000" aria-pressed="false">$500K</button>
+          <button class="chip" type="button" data-amt="1000000" aria-pressed="false">$1M</button>
+        </div>
+        <div class="fund-card__purpose">
+          <label id="purpose-l">What's it for?</label>
+          <div class="seg" role="group" aria-labelledby="purpose-l">
+            <button type="button" data-purpose="growth" aria-pressed="true">Growth</button>
+            <button type="button" data-purpose="operations" aria-pressed="false">Cash flow</button>
+            <button type="button" data-purpose="equipment" aria-pressed="false">Equipment</button>
+          </div>
+        </div>
+        <a class="btn btn--white btn--lg" id="fund-go" href="/apply/">Get Funded {{i:arrow}}</a>
+        <p class="fund-card__fine">{{i:lock}} Soft pull only · No obligation to proceed</p>
+      </div></div>
+    </div>
+
+    <form class="askbar fade-up d5" id="askbar" role="search">
+      <div class="askbar__box">
+        <svg class="askbar__spark" viewBox="0 0 24 24" aria-hidden="true"><defs><linearGradient id="sg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#48D6E4"/><stop offset=".5" stop-color="#3B5BFF"/><stop offset="1" stop-color="#0329D1"/></linearGradient></defs><path fill="url(#sg)" d="M12 1.5c.5 4.9 3.6 8 8.5 8.5v1c-4.9.5-8 3.6-8.5 8.5h-1c-.5-4.9-3.6-8-8.5-8.5v-1c4.9-.5 8-3.6 8.5-8.5z"/></svg>
+        <label class="sr-only" for="askbar-in">Ask Fidelity AI</label>
+        <input id="askbar-in" type="text" placeholder="How fast can I get funded?" autocomplete="off">
+        <button class="askbar__mic" type="button" id="askbar-mic" aria-label="Ask by voice">{{i:mic}}</button>
+        <button class="askbar__go" type="submit" aria-label="Ask">{{i:arrow}}</button>
+      </div>
+      <div class="askbar__chips">
+        <button class="chip" type="button" data-hero-ask="Will applying affect my credit score?">Will this affect my credit?</button>
+        <button class="chip" type="button" data-hero-ask="What's the difference between a loan and a merchant cash advance?">Loan vs. MCA</button>
+        <button class="chip" type="button" data-hero-ask="What documents do I need?">Documents needed</button>
+        <button class="chip" type="button" data-hero-ask="Do you work with trucking companies?">Trucking funding</button>
+      </div>
+    </form>
+  </div>
+  <span class="scroll-cue" aria-hidden="true"></span>
+</section>
+
+<div class="marquee" aria-label="Highlights">
+  <div class="marquee__track">
+    <span class="marquee__item">{{i:clock}} Decisions in hours, not weeks</span>
+    <span class="marquee__item">{{i:bolt}} Funding often within 24 hours</span>
+    <span class="marquee__item">{{i:shield}} Soft pull — no credit impact</span>
+    <span class="marquee__item">{{i:dollar}} $5K to $1M</span>
+    <span class="marquee__item">{{i:building}} National lender network</span>
+    <span class="marquee__item">{{i:users}} Real people, every step</span>
+    <span class="marquee__item">{{i:scale}} Compare before you commit</span>
+    <span class="marquee__item" aria-hidden="true">{{i:clock}} Decisions in hours, not weeks</span>
+    <span class="marquee__item" aria-hidden="true">{{i:bolt}} Funding often within 24 hours</span>
+    <span class="marquee__item" aria-hidden="true">{{i:shield}} Soft pull — no credit impact</span>
+    <span class="marquee__item" aria-hidden="true">{{i:dollar}} $5K to $1M</span>
+    <span class="marquee__item" aria-hidden="true">{{i:building}} National lender network</span>
+    <span class="marquee__item" aria-hidden="true">{{i:users}} Real people, every step</span>
+    <span class="marquee__item" aria-hidden="true">{{i:scale}} Compare before you commit</span>
+  </div>
+</div>
+
+<section class="section section--soft" id="how" aria-labelledby="how-title">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">How it works</span>
+      <h2 class="h2" id="how-title">Take control of your<br>business growth <span class="grad-blue">today.</span></h2>
+      <p class="lead">Three simple steps. No red tape, no endless waiting.</p>
+    </div>
+    <div class="steps reveal-stagger">
+      <div class="steps__line" aria-hidden="true"><i></i></div>
+      <article class="step">
+        <div class="step__num">01</div>
+        <div class="step__icon">{{i:doc-check}}</div>
+        <h3>Tell us what you need</h3>
+        <p>Answer a few quick questions — no impact on credit and no obligation to proceed.</p>
+      </article>
+      <article class="step">
+        <div class="step__num">02</div>
+        <div class="step__icon">{{i:users}}</div>
+        <h3>Connect with an expert</h3>
+        <p>Speak directly with a funding specialist who’ll guide you through your best options.</p>
+      </article>
+      <article class="step">
+        <div class="step__num">03</div>
+        <div class="step__icon">{{i:rocket}}</div>
+        <h3>Get funded fast</h3>
+        <p>Claim your personalized offer and receive funding, often within 24 hours.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="products" aria-labelledby="prod-title">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Solutions</span>
+      <h2 class="h2" id="prod-title">Business financing.<br>Made simple.</h2>
+      <p class="lead">Flexible, reliable solutions designed around your business’s unique financial needs.</p>
+    </div>
+    <div class="products reveal-stagger">
+      <a class="product" href="/apply/?product=loan">
+        <div class="product__bg"></div><div class="product__orb"></div>
+        <div class="product__icon">{{i:briefcase}}</div>
+        <div class="product__kicker">Grow · Hire · Stabilize</div>
+        <h3>Small Business Loans</h3>
+        <p>Access working capital to grow, hire, or stabilize operations. Flexible terms, competitive rates, and fast approvals.</p>
+        <div class="product__cta"><span class="link-arrow">Learn more</span><span class="product__go">{{i:arrow}}</span></div>
+      </a>
+      <a class="product" href="/apply/?product=mca">
+        <div class="product__bg"></div><div class="product__orb"></div>
+        <div class="product__icon">{{i:cash}}</div>
+        <div class="product__kicker">Revenue-based</div>
+        <h3>Merchant Cash Advances</h3>
+        <p>Receive funding based on your business’s future sales. Perfect for businesses with strong daily transactions but limited collateral.</p>
+        <div class="product__cta"><span class="link-arrow">Learn more</span><span class="product__go">{{i:arrow}}</span></div>
+      </a>
+      <a class="product" href="/contact/?topic=processing">
+        <div class="product__bg"></div><div class="product__orb"></div>
+        <div class="product__icon">{{i:card}}</div>
+        <div class="product__kicker">Save · Get paid faster</div>
+        <h3>Credit Card Processing</h3>
+        <p>Save money and get paid faster with integrated payment solutions — tailored for small business owners.</p>
+        <div class="product__cta"><span class="link-arrow">Learn more</span><span class="product__go">{{i:arrow}}</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight" id="about" aria-labelledby="about-title">
+  <div class="container">
+    <div class="showcase reveal">
+      <picture>
+        <source media="(max-width:640px)" srcset="/assets/img/hero-rhino-mobile.webp">
+        <img class="showcase__img" data-parallax src="/assets/img/hero-rhino.webp" alt="A rhino standing among rising blue growth arrows" loading="lazy" width="1600" height="1080">
+      </picture>
+      <div class="showcase__body">
+        <span class="eyebrow">About Fidelity Funding</span>
+        <h2 class="h2" id="about-title" style="margin-top:14px">Built for businesses the banks left behind.</h2>
+        <p class="lead" style="margin-top:20px">In these challenging times, traditional banks have made it harder than ever for small and medium-sized businesses to access capital. Fidelity Funding was built to change that.</p>
+        <p class="lead">Through our network of trusted national lenders, we provide the flexibility and speed modern businesses need — without the red tape or endless waiting.</p>
+      </div>
+      <div class="showcase__stats">
+        <div class="glass-stat"><b>Hours</b><span>to an initial decision</span></div>
+        <div class="glass-stat"><b>24h</b><span>typical time to funds once approved</span></div>
+        <div class="glass-stat"><b>$5K–$1M</b><span>funding requests we handle</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="why-title">
+  <div class="container why">
+    <div class="reveal">
+      <span class="eyebrow">Why Fidelity</span>
+      <h2 class="h2" id="why-title" style="margin-top:14px">Real options.<br>Not empty promises.</h2>
+      <p class="lead" style="margin-top:18px">With our national network of lenders, every recommendation is made with clarity and your success in mind — and funding can often be completed within 24 hours.</p>
+      <div class="why__list reveal-stagger">
+        <div class="why__item"><span class="ic">{{i:clock}}</span><div><h3>Decisions in hours, not weeks</h3><p>A fast, focused process built around how modern businesses actually operate.</p></div></div>
+        <div class="why__item"><span class="ic">{{i:users}}</span><div><h3>Real people to guide you every step</h3><p>A dedicated funding specialist — not a call center, not a chatbot maze.</p></div></div>
+        <div class="why__item"><span class="ic">{{i:scale}}</span><div><h3>Compare options before you commit</h3><p>See real offers side by side and choose what actually makes sense.</p></div></div>
+      </div>
+      <a class="btn btn--primary btn--lg" href="/apply/" style="margin-top:32px">Get Funded {{i:arrow}}</a>
+    </div>
+    <div class="why__visual reveal" aria-hidden="true">
+      <img src="/assets/img/illus-growth.webp" alt="" loading="lazy" width="900" height="885">
+      <div class="float-card a"><span class="ic">{{i:check}}</span><div>Offer ready<small>Specialist review complete</small></div></div>
+      <div class="float-card b"><span class="ic">{{i:bolt}}</span><div>Funds deposited<small>Often within 24 hours</small></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--soft" aria-labelledby="uc-title">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Use cases</span>
+      <h2 class="h2" id="uc-title">Funding that moves your business forward.</h2>
+      <p class="lead">From covering daily expenses to expanding into new markets — use your funding however you need to grow, stabilize, or strengthen your business.</p>
+    </div>
+    <div data-tabs class="reveal">
+      <div class="tabs__list" role="tablist" aria-label="Use cases">
+        <span class="tabs__pill" aria-hidden="true"></span>
+        <button role="tab" id="t-growth" aria-controls="p-growth" aria-selected="true">Growth &amp; Expansion</button>
+        <button role="tab" id="t-ops" aria-controls="p-ops" aria-selected="false" tabindex="-1">Operations &amp; Cash Flow</button>
+        <button role="tab" id="t-eq" aria-controls="p-eq" aria-selected="false" tabindex="-1">Equipment &amp; Upgrades</button>
+      </div>
+      <div class="tabs__panels">
+        <div class="tab-panel" role="tabpanel" id="p-growth" aria-labelledby="t-growth">
+          <div class="tab-panel__hero"><span class="tab-panel__tag">Growth financing</span><h3>Seize the opportunity before competitors do.</h3><p>Expand, launch and scale with capital that moves at your speed.</p><a class="btn btn--white" href="/apply/?purpose=growth">Fund my growth {{i:arrow}}</a></div>
+          <ul class="uc-list">
+            <li class="uc">{{i:building}}Open new locations or remodel existing ones</li>
+            <li class="uc">{{i:rocket}}Launch new product lines or service offerings</li>
+            <li class="uc">{{i:cart}}Increase inventory ahead of seasonal demand</li>
+            <li class="uc">{{i:trend}}Scale your marketing and advertising</li>
+            <li class="uc">{{i:users}}Hire new staff or expand your operations team</li>
+            <li class="uc">{{i:target}}Take advantage of new opportunities before competitors</li>
+          </ul>
+        </div>
+        <div class="tab-panel" role="tabpanel" id="p-ops" aria-labelledby="t-ops" hidden>
+          <div class="tab-panel__hero"><span class="tab-panel__tag">Working capital</span><h3>Keep every day running smoothly.</h3><p>Bridge the gaps between what you’re owed and what you owe.</p><a class="btn btn--white" href="/apply/?purpose=operations">Steady my cash flow {{i:arrow}}</a></div>
+          <ul class="uc-list">
+            <li class="uc">{{i:cash}}Manage payroll, rent, and day-to-day operating expenses</li>
+            <li class="uc">{{i:refresh}}Bridge cash flow gaps between receivables and payables</li>
+            <li class="uc">{{i:hammer}}Cover emergency repairs or unexpected costs</li>
+            <li class="uc">{{i:scale}}Refinance high-interest short-term loans</li>
+            <li class="uc">{{i:file}}Handle tax payments or business insurance renewals</li>
+            <li class="uc">{{i:clock}}Maintain steady operations during slow or off-peak seasons</li>
+          </ul>
+        </div>
+        <div class="tab-panel" role="tabpanel" id="p-eq" aria-labelledby="t-eq" hidden>
+          <div class="tab-panel__hero"><span class="tab-panel__tag">Equipment financing</span><h3>Upgrade the tools that make you money.</h3><p>Modernize, stay compliant and stay ahead of the curve.</p><a class="btn btn--white" href="/apply/?purpose=equipment">Upgrade my equipment {{i:arrow}}</a></div>
+          <ul class="uc-list">
+            <li class="uc">{{i:truck}}Purchase new vehicles, tools, or heavy machinery</li>
+            <li class="uc">{{i:gear}}Replace or upgrade outdated equipment</li>
+            <li class="uc">{{i:card}}Invest in new technology, software, or point-of-sale systems</li>
+            <li class="uc">{{i:shield}}Improve safety and compliance with updated gear</li>
+            <li class="uc">{{i:factory}}Modernize your workspace or warehouse for efficiency</li>
+            <li class="uc">{{i:sparkles}}Stay competitive with the latest industry innovations</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--dark" aria-labelledby="ind-title" style="overflow:hidden">
+  <div class="container">
+    <div class="row">
+      <div class="row__head reveal">
+        <div>
+          <span class="eyebrow">Industries</span>
+          <h2 class="h2" id="ind-title" style="margin-top:14px">Funding for every kind of business.</h2>
+        </div>
+        <div class="row__nav"><button class="row__btn" data-dir="-1" aria-label="Scroll left">{{i:chev-l}}</button><button class="row__btn" data-dir="1" aria-label="Scroll right">{{i:chev-r}}</button></div>
+      </div>
+      <div class="row__track" role="list">
+        <a class="tile" role="listitem" href="/insights/trucking-company-mca-2026/"><div class="tile__bg" style="background:linear-gradient(160deg,#0329D1,#050A2A)"></div><span class="tile__rank">01</span><div class="tile__big">{{i:truck}}</div><span class="tile__icon">{{i:truck}}</span><h3>Trucking &amp; Transportation</h3><p>Cover fuel, drivers and repairs while loads pay in 30–90 days.</p></a>
+        <a class="tile" role="listitem" href="/insights/restaurant-owner-improve-approval-odds-merchant-cash-advance/"><div class="tile__bg" style="background:linear-gradient(160deg,#0A8FB0,#071B4E)"></div><span class="tile__rank">02</span><div class="tile__big">{{i:utensils}}</div><span class="tile__icon">{{i:utensils}}</span><h3>Restaurants</h3><p>Equipment, renovations and seasonal staffing on your timeline.</p></a>
+        <a class="tile" role="listitem" href="/insights/merchant-cash-advance-retail-shop-stabilize-cash-flow/"><div class="tile__bg" style="background:linear-gradient(160deg,#5B3BFF,#0B0E4A)"></div><span class="tile__rank">03</span><div class="tile__big">{{i:store}}</div><span class="tile__icon">{{i:store}}</span><h3>Retail</h3><p>Stock up ahead of busy seasons and smooth uneven revenue.</p></a>
+        <a class="tile" role="listitem" href="/apply/"><div class="tile__bg" style="background:linear-gradient(160deg,#1E43FF,#0A2F9B)"></div><span class="tile__rank">04</span><div class="tile__big">{{i:hammer}}</div><span class="tile__icon">{{i:hammer}}</span><h3>Construction</h3><p>Materials, payroll and machinery between project draws.</p></a>
+        <a class="tile" role="listitem" href="/apply/"><div class="tile__bg" style="background:linear-gradient(160deg,#18B6D6,#0A2F9B)"></div><span class="tile__rank">05</span><div class="tile__big">{{i:heart}}</div><span class="tile__icon">{{i:heart}}</span><h3>Healthcare</h3><p>Upgrade equipment and bridge slow insurance reimbursements.</p></a>
+        <a class="tile" role="listitem" href="/apply/"><div class="tile__bg" style="background:linear-gradient(160deg,#3B5BFF,#090F66)"></div><span class="tile__rank">06</span><div class="tile__big">{{i:car}}</div><span class="tile__icon">{{i:car}}</span><h3>Auto Services</h3><p>Lifts, diagnostics, parts inventory and expansion.</p></a>
+        <a class="tile" role="listitem" href="/apply/"><div class="tile__bg" style="background:linear-gradient(160deg,#8B5CF6,#0A2F9B)"></div><span class="tile__rank">07</span><div class="tile__big">{{i:scissors}}</div><span class="tile__icon">{{i:scissors}}</span><h3>Beauty &amp; Wellness</h3><p>Build-outs, chairs, equipment and marketing.</p></a>
+        <a class="tile" role="listitem" href="/apply/"><div class="tile__bg" style="background:linear-gradient(160deg,#0329D1,#18B6D6)"></div><span class="tile__rank">08</span><div class="tile__big">{{i:briefcase}}</div><span class="tile__icon">{{i:briefcase}}</span><h3>Professional Services</h3><p>Hire, invest in technology and grow your client base.</p></a>
+        <a class="tile" role="listitem" href="/apply/"><div class="tile__bg" style="background:linear-gradient(160deg,#0A2F9B,#030619)"></div><span class="tile__rank">09</span><div class="tile__big">{{i:factory}}</div><span class="tile__icon">{{i:factory}}</span><h3>Manufacturing</h3><p>Raw materials, machinery and bigger purchase orders.</p></a>
+      </div>
+    </div>
+    <figure class="quote reveal" style="margin-top:clamp(80px,10vw,140px)" aria-label="Client testimonial">
+      <svg class="quote__mark icon" aria-hidden="true"><use href="#i-quote"/></svg>
+      <blockquote>Working with Fidelity Funding was different from every other lender I’ve talked to. They didn’t push one option — they found <em>what actually made sense for my business.</em> I was funded in less than two days.</blockquote>
+      <div class="stars" aria-label="5 out of 5 stars">{{i:star}}{{i:star}}{{i:star}}{{i:star}}{{i:star}}</div>
+      <figcaption class="quote__who"><span class="avatar">JR</span><span><b>James R.</b><span>HVAC Contractor</span></span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="ins-title" style="overflow:hidden">
+  <div class="container">
+    <div class="row">
+      <div class="row__head reveal">
+        <div>
+          <span class="eyebrow">Insights</span>
+          <h2 class="h2" id="ins-title" style="margin-top:14px">Guides from our funding desk.</h2>
+        </div>
+        <div style="display:flex;gap:12px;align-items:center"><a class="link-arrow" href="/insights/">View all {{i:arrow}}</a><div class="row__nav"><button class="row__btn" data-dir="-1" aria-label="Scroll left">{{i:chev-l}}</button><button class="row__btn" data-dir="1" aria-label="Scroll right">{{i:chev-r}}</button></div></div>
+      </div>
+      <div class="row__track" style="grid-auto-columns:clamp(280px,31vw,380px)">
+        <a class="vcard" href="/insights/trucking-company-mca-2026/">
+          <div class="vcard__thumb"><img src="/assets/img/post-trucking.webp" alt="" loading="lazy" width="1400" height="788"><span class="vcard__badge">3 min read</span><span class="vcard__bar"></span></div>
+          <div class="vcard__meta"><span class="vcard__ch"><img src="/assets/img/favicon-32.png" alt="" width="28" height="28"></span><div><div class="vcard__title">How Your Trucking Company Can Navigate 2026 Fuel Prices Using MCA</div><div class="vcard__sub">Fidelity Funding · Apr 14, 2026</div></div></div>
+        </a>
+        <a class="vcard" href="/insights/merchant-cash-advance-retail-shop-stabilize-cash-flow/">
+          <div class="vcard__thumb"><div class="vcard__art" style="background:linear-gradient(140deg,#5B3BFF,#0B0E4A)">{{i:store}}<strong>Can an MCA stabilize retail cash flow?</strong></div><span class="vcard__badge">3 min read</span><span class="vcard__bar"></span></div>
+          <div class="vcard__meta"><span class="vcard__ch"><img src="/assets/img/favicon-32.png" alt="" width="28" height="28"></span><div><div class="vcard__title">Can a merchant cash advance help my retail shop stabilize cash flow?</div><div class="vcard__sub">Fidelity Funding · Nov 26, 2025</div></div></div>
+        </a>
+        <a class="vcard" href="/insights/restaurant-owner-improve-approval-odds-merchant-cash-advance/">
+          <div class="vcard__thumb"><div class="vcard__art" style="background:linear-gradient(140deg,#0A8FB0,#071B4E)">{{i:utensils}}<strong>Restaurant MCA approval odds</strong></div><span class="vcard__badge">3 min read</span><span class="vcard__bar"></span></div>
+          <div class="vcard__meta"><span class="vcard__ch"><img src="/assets/img/favicon-32.png" alt="" width="28" height="28"></span><div><div class="vcard__title">How can a restaurant owner improve approval odds for a merchant cash advance?</div><div class="vcard__sub">Fidelity Funding · Nov 26, 2025</div></div></div>
+        </a>
+        <a class="vcard" href="/insights/trucking-company-merchant-cash-advance-approval-odds/">
+          <div class="vcard__thumb"><div class="vcard__art" style="background:linear-gradient(140deg,#0329D1,#050A2A)">{{i:truck}}<strong>Trucking MCA approval odds</strong></div><span class="vcard__badge">3 min read</span><span class="vcard__bar"></span></div>
+          <div class="vcard__meta"><span class="vcard__ch"><img src="/assets/img/favicon-32.png" alt="" width="28" height="28"></span><div><div class="vcard__title">How can my trucking company improve approval odds for a merchant cash advance?</div><div class="vcard__sub">Fidelity Funding · Nov 26, 2025</div></div></div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--soft" id="faq" aria-labelledby="faq-title">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">FAQ</span>
+      <h2 class="h2" id="faq-title">Questions, answered.</h2>
+      <p class="lead">Still curious? <button class="link-arrow" type="button" data-ai-open>Ask Fidelity AI {{i:sparkles}}</button></p>
+    </div>
+    <div class="faq reveal">
+      <details open><summary>How long does it take to get approved and funded?<span class="faq__pm" aria-hidden="true"></span></summary><div class="faq__a"><p>Most applicants receive an initial decision within hours of submitting their information. Once approved, funds can often be deposited in as little as 24 hours, depending on the loan type and documentation required.</p></div></details>
+      <details><summary>Will applying affect my credit score?<span class="faq__pm" aria-hidden="true"></span></summary><div class="faq__a"><p>No — your initial application and funding analysis use a soft credit pull, meaning it does not impact your credit score. A hard inquiry is only performed if you decide to move forward with a specific lender.</p></div></details>
+      <details><summary>What can I use the funds for?<span class="faq__pm" aria-hidden="true"></span></summary><div class="faq__a"><p>Almost anything related to your business! From covering payroll and inventory to expanding locations or upgrading equipment — these are just examples. You’re free to use your funding however it best supports your business.</p></div></details>
+      <details><summary>What types of businesses does Fidelity Funding work with?<span class="faq__pm" aria-hidden="true"></span></summary><div class="faq__a"><p>We work with a wide range of small and mid-sized businesses across every industry — including retail, construction, transportation, healthcare, restaurants, and more. Whether you’re a startup or an established company, we’ll help you find the right financing solution.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight" aria-label="Get started">
+  <div class="container">
+    <div class="cta-band reveal">
+      <div class="hero__bg" aria-hidden="true"><div class="aurora"><i></i><i></i><i></i><i></i></div><div class="hero__grid"></div></div>
+      <span class="eyebrow">Get started</span>
+      <h2 class="h2">Your next chapter is one application away.</h2>
+      <p class="lead">Five minutes. No impact on your credit. A real specialist on your side.</p>
+      <div class="cta-band__btns">
+        <a class="btn btn--white btn--lg" href="/apply/">Get Funded {{i:arrow}}</a>
+        <a class="btn btn--ghost-dark btn--lg" href="tel:+12126349121">{{i:phone}} (212) 634-9121</a>
+      </div>
+    </div>
+  </div>
+</section>

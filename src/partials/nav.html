@@ -1,0 +1,36 @@
+<header class="nav" id="nav">
+  <div class="container nav__inner">
+    <a class="nav__logo" href="/" aria-label="Fidelity Funding — home">
+      <img class="logo-light" src="/assets/img/logo-white.webp" alt="Fidelity Funding" width="277" height="82">
+      <img class="logo-dark" src="/assets/img/logo.webp" alt="" width="277" height="82">
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="/" data-nav="home">Home</a>
+      <a href="/#products">Solutions</a>
+      <a href="/insights/" data-nav="insights">Insights</a>
+      <a href="/careers/" data-nav="careers">Careers</a>
+      <a href="/contact/" data-nav="contact">Contact</a>
+    </nav>
+    <div class="nav__actions">
+      <button class="nav__ai" type="button" data-cmdk aria-label="Search or ask Fidelity AI">{{i:sparkles}} Ask AI <kbd>⌘K</kbd></button>
+      <a class="nav__phone" href="tel:+12126349121">{{i:phone}}<span>(212) 634-9121</span></a>
+      <a class="btn btn--primary btn--sm" href="/apply/" data-nav="apply">Get Funded</a>
+      <button class="nav__burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span></button>
+    </div>
+  </div>
+  <div class="progress-bar" id="progress"></div>
+</header>
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <nav aria-label="Mobile">
+    <a class="mm-link" href="/">Home</a>
+    <a class="mm-link" href="/#products">Solutions</a>
+    <a class="mm-link" href="/insights/">Insights</a>
+    <a class="mm-link" href="/careers/">Careers</a>
+    <a class="mm-link" href="/contact/">Contact</a>
+    <a class="mm-link" href="/apply/">Apply</a>
+  </nav>
+  <div class="mobile-menu__foot">
+    <a class="btn btn--white btn--lg" href="/apply/">Get Funded {{i:arrow}}</a>
+    <a class="btn btn--ghost-dark btn--lg" href="tel:+12126349121">{{i:phone}} (212) 634-9121</a>
+  </div>
+</div>

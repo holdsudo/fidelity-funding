@@ -1,0 +1,49 @@
+<!--{"title":"Contact Fidelity Funding — Let's Work Together","desc":"Talk to a Fidelity Funding specialist. Call (212) 634-9121, email operations@fidelity-funding.com, or visit 1655 Richmond Ave, Staten Island, NY.","nav":"contact"}-->
+<section class="page-hero">
+  <div class="hero__bg" aria-hidden="true"><div class="aurora"><i></i><i></i><i></i><i></i></div><div class="hero__grid"></div></div>
+  <div class="container">
+    <nav class="crumbs fade-up" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><span>Contact</span></nav>
+    <h1 class="h1 fade-up d1">Let’s work <span class="grad-text">together.</span></h1>
+    <p class="lead fade-up d2">Whether you’re exploring financing options, have questions about a current application, or just want to talk through what’s possible — our team is ready to help. At Fidelity Funding, we take pride in offering personal, transparent guidance to every business owner we work with.</p>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="container contact-grid">
+    <div>
+      <div class="ccards reveal-stagger">
+        <a class="ccard" href="tel:+12126349121"><span class="ic">{{i:phone}}</span><span><small>Call a specialist</small><b>(212) 634-9121</b></span><span class="go">{{i:arrow-up-right}}</span></a>
+        <a class="ccard" href="mailto:operations@fidelity-funding.com"><span class="ic">{{i:mail}}</span><span style="min-width:0"><small>Email</small><b style="overflow-wrap:anywhere">operations@fidelity-funding.com</b></span><span class="go">{{i:arrow-up-right}}</span></a>
+        <button class="ccard" type="button" data-ai-open style="text-align:left;width:100%"><span class="ic">{{i:sparkles}}</span><span><small>Instant answers, 24/7</small><b>Ask Fidelity AI</b></span><span class="go">{{i:arrow}}</span></button>
+      </div>
+      <a class="map-card reveal" href="https://maps.google.com/?q=1655+Richmond+Ave,+Staten+Island,+NY+10314" target="_blank" rel="noopener" aria-label="Open our office in Google Maps" style="display:block">
+        <svg class="map-lines" viewBox="0 0 400 220" preserveAspectRatio="xMidYMid slice" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M-10 160 C80 140 120 60 220 70 S360 20 420 40"/><path d="M-10 60 C60 80 140 120 200 110 S330 150 420 130" stroke-width="5" stroke="#fff"/><path d="M60 -10 L90 230M250 -10 L210 230M330 -10 L360 230" stroke-width="1.2"/><path d="M-10 200 L420 180M-10 20 L420 0" stroke-width="1.2"/><circle cx="300" cy="170" r="30" fill="#DDE6FF" stroke="none"/><rect x="40" y="90" width="70" height="40" rx="8" fill="#E2F6EA" stroke="none"/></svg>
+        <span class="map-pin">{{i:pin}}</span>
+        <span class="map-card__label"><span>1655 Richmond Ave, Staten Island, NY 10314</span><span class="link-arrow">Directions {{i:arrow}}</span></span>
+      </a>
+    </div>
+
+    <div class="form-card reveal">
+      <h2 class="h3">Send us a message</h2>
+      <p class="muted" style="margin-top:6px">A specialist will get back to you shortly.</p>
+      <form style="margin-top:28px" data-fake-form="Message sent" data-success-target="#contact-ok">
+        <div class="grid-2">
+          <div class="field"><label for="c-name">Full name</label><input class="input" id="c-name" name="name" required autocomplete="name"></div>
+          <div class="field"><label for="c-biz">Business name</label><input class="input" id="c-biz" name="business" autocomplete="organization"></div>
+          <div class="field"><label for="c-email">Email</label><input class="input" id="c-email" name="email" type="email" required autocomplete="email"></div>
+          <div class="field"><label for="c-phone">Phone</label><input class="input" id="c-phone" name="phone" type="tel" autocomplete="tel"></div>
+          <div class="field span-2"><label for="c-topic">How can we help?</label>
+            <select class="select" id="c-topic" name="topic"><option value="funding">I'm exploring funding options</option><option value="application">Question about my application</option><option value="processing">Credit card processing</option><option value="careers">Careers</option><option value="other">Something else</option></select></div>
+          <div class="field span-2"><label for="c-msg">Message</label><textarea class="textarea" id="c-msg" name="message" placeholder="Tell us a little about your business and what you need."></textarea></div>
+        </div>
+        <label class="check" style="margin-top:18px"><input type="checkbox" name="sms_consent">I agree to receive text messages from Fidelity Funding at the number provided. Consent is not a condition of any purchase. Reply STOP to unsubscribe. Msg &amp; data rates may apply.</label>
+        <button class="btn btn--primary btn--lg" type="submit" style="margin-top:24px;width:100%">Send message {{i:send}}</button>
+      </form>
+      <div class="success" id="contact-ok" hidden style="padding:20px 0">
+        <div class="success__check"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></div>
+        <h2 class="h3" style="margin-top:28px">Message received.</h2>
+        <p>Thanks for reaching out — a Fidelity specialist will be in touch shortly. Need us sooner? Call <a href="tel:+12126349121" style="color:var(--blue);font-weight:650">(212) 634-9121</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>

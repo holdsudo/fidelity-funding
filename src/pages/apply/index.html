@@ -1,0 +1,156 @@
+<!--{"title":"Apply for Business Funding — Fidelity Funding","desc":"Secure the capital your business needs. Fast, secure, hassle-free application — finish in under 5 minutes with no impact on your credit.","nav":"apply","light":true,"scripts":["apply.js"]}-->
+<section class="section" style="padding-top:calc(var(--nav-h) + clamp(40px,6vw,72px));background:linear-gradient(180deg,var(--bg-soft),#fff 60%)">
+  <div class="container">
+    <div class="section-head reveal" style="margin-bottom:clamp(32px,5vw,56px)">
+      <span class="eyebrow">Application</span>
+      <h1 class="h1" style="margin-top:14px">Secure the capital<br><span class="grad-blue">your business needs.</span></h1>
+      <p class="lead">Fast, secure, and hassle-free. Finish your application in under 5 minutes — the initial review won’t affect your credit.</p>
+    </div>
+
+    <div class="apply">
+      <aside class="apply__aside" aria-label="Application progress">
+        <ol class="apply-steps" id="apply-steps">
+          <li class="apply-step is-active" data-step="0"><span class="apply-step__n">1</span><span>Business<small>About your company</small></span></li>
+          <li class="apply-step" data-step="1"><span class="apply-step__n">2</span><span>Owner<small>Primary owner details</small></span></li>
+          <li class="apply-step" data-step="2"><span class="apply-step__n">3</span><span>Funding<small>Amount &amp; statements</small></span></li>
+          <li class="apply-step" data-step="3"><span class="apply-step__n">4</span><span>Review &amp; sign<small>Confirm and submit</small></span></li>
+        </ol>
+        <ul class="apply-assure">
+          <li>{{i:lock}}<span>Encrypted end-to-end. We never sell your information.</span></li>
+          <li>{{i:shield}}<span>Soft pull only — no impact on your credit score.</span></li>
+          <li>{{i:clock}}<span>Decisions often within hours.</span></li>
+          <li>{{i:phone}}<span>Questions? <a href="tel:+12126349121" style="color:#fff;font-weight:650">(212) 634-9121</a></span></li>
+        </ul>
+      </aside>
+
+      <div class="apply-card">
+        <div class="apply-progress" aria-hidden="true"><i id="apply-bar"></i></div>
+        <form id="apply-form" novalidate autocomplete="on">
+
+          <!-- Step 1: Business -->
+          <fieldset class="fstep is-active" data-step="0" style="border:0;padding:0;margin:0">
+            <div class="fstep__head"><span class="eyebrow">Step 1 of 4</span><h2>🧾 Business information</h2><p>Tell us about the business you’re funding.</p></div>
+            <div class="grid-2">
+              <div class="field span-2"><label for="a-legal">Legal business name <span class="req">*</span></label><input class="input" id="a-legal" name="legal_name" required autocomplete="organization"><span class="field__err">Please enter your legal business name.</span></div>
+              <div class="field"><label for="a-dba">DBA name <span class="muted">(if applicable)</span></label><input class="input" id="a-dba" name="dba"></div>
+              <div class="field"><label for="a-web">Website</label><input class="input" id="a-web" name="website" type="url" inputmode="url" placeholder="https://"></div>
+              <div class="field"><label for="a-ein">Tax ID (EIN) <span class="req">*</span></label><input class="input" id="a-ein" name="ein" required inputmode="numeric" data-mask="ein" placeholder="12-3456789" data-sensitive><span class="field__err">Enter a 9-digit EIN.</span></div>
+              <div class="field"><label for="a-start">Business start date <span class="req">*</span></label><input class="input" id="a-start" name="start_date" type="date" required><span class="field__err">Please choose a start date.</span></div>
+              <div class="field span-2"><label for="a-addr">Business address <span class="req">*</span></label><input class="input" id="a-addr" name="address" required autocomplete="street-address"><span class="field__err">Please enter the business address.</span></div>
+            </div>
+            <div class="grid-3" style="margin-top:18px">
+              <div class="field"><label for="a-city">City <span class="req">*</span></label><input class="input" id="a-city" name="city" required autocomplete="address-level2"><span class="field__err">Required.</span></div>
+              <div class="field"><label for="a-state">State <span class="req">*</span></label><select class="select" id="a-state" name="state" required data-states></select><span class="field__err">Required.</span></div>
+              <div class="field"><label for="a-zip">Postal code <span class="req">*</span></label><input class="input" id="a-zip" name="zip" required inputmode="numeric" maxlength="5" pattern="\d{5}" autocomplete="postal-code"><span class="field__err">5-digit ZIP.</span></div>
+            </div>
+            <div class="grid-2" style="margin-top:18px">
+              <div class="field"><label for="a-phone">Business phone <span class="req">*</span></label><input class="input" id="a-phone" name="business_phone" type="tel" required data-mask="phone" placeholder="(555) 555-5555" autocomplete="tel"><span class="field__err">Enter a 10-digit phone number.</span></div>
+              <div class="field"><label for="a-ind">Industry type <span class="req">*</span></label><select class="select" id="a-ind" name="industry" required><option value="">Please select</option><option>Retail</option><option>Restaurant / Food service</option><option>Trucking / Transportation</option><option>Construction</option><option>Healthcare</option><option>Auto services</option><option>Beauty &amp; wellness</option><option>Professional services</option><option>Manufacturing</option><option>E-commerce</option><option>Real estate</option><option>Other</option></select><span class="field__err">Please choose an industry.</span></div>
+              <div class="field"><span class="label" id="loc-l">Business location <span class="req">*</span></span>
+                <div class="radio-cards" role="radiogroup" aria-labelledby="loc-l">
+                  <label class="radio-card"><input type="radio" name="location_type" value="Owned" required><span>Owned</span></label>
+                  <label class="radio-card"><input type="radio" name="location_type" value="Leased"><span>Leased</span></label>
+                  <label class="radio-card"><input type="radio" name="location_type" value="Home-based"><span>Home</span></label>
+                </div><span class="field__err">Please choose one.</span></div>
+              <div class="field"><label for="a-entity">Legal entity type <span class="req">*</span></label><select class="select" id="a-entity" name="entity" required><option value="">Please select</option><option>LLC</option><option>Corporation (C-Corp)</option><option>S-Corp</option><option>Sole proprietorship</option><option>Partnership</option><option>Non-profit</option></select><span class="field__err">Please choose an entity type.</span></div>
+            </div>
+          </fieldset>
+
+          <!-- Step 2: Owner -->
+          <fieldset class="fstep" data-step="1" style="border:0;padding:0;margin:0">
+            <div class="fstep__head"><span class="eyebrow">Step 2 of 4</span><h2>👤 Primary owner</h2><p>The majority owner or an authorized officer of the business.</p></div>
+            <div class="grid-2">
+              <div class="field"><label for="o-name">Full name <span class="req">*</span></label><input class="input" id="o-name" name="owner_name" required autocomplete="name"><span class="field__err">Please enter your full name.</span></div>
+              <div class="field"><label for="o-email">Email <span class="req">*</span></label><input class="input" id="o-email" name="owner_email" type="email" required autocomplete="email"><span class="field__err">Enter a valid email.</span></div>
+              <div class="field"><label for="o-cell">Cell phone <span class="req">*</span></label><input class="input" id="o-cell" name="owner_cell" type="tel" required data-mask="phone" placeholder="(555) 555-5555" autocomplete="tel"><span class="field__err">Enter a 10-digit phone number.</span></div>
+              <div class="field"><label for="o-own">Ownership % <span class="req">*</span></label><div class="input-wrap"><input class="input" id="o-own" name="ownership" required inputmode="numeric" type="number" min="1" max="100" placeholder="100"></div><span class="field__err">Enter 1–100.</span></div>
+              <div class="field"><label for="o-ssn">Social Security Number <span class="req">*</span></label><div class="input-wrap"><input class="input" id="o-ssn" name="ssn" type="password" required inputmode="numeric" data-mask="ssn" placeholder="•••-••-••••" autocomplete="off" data-sensitive><button class="toggle-vis" type="button" aria-label="Show SSN" data-toggle="o-ssn">{{i:eye}}</button></div><span class="field__hint">Used for a soft pull only — no credit impact.</span><span class="field__err">Enter a 9-digit SSN.</span></div>
+              <div class="field"><label for="o-dob">Date of birth <span class="req">*</span></label><input class="input" id="o-dob" name="dob" type="date" required autocomplete="bday" data-sensitive><span class="field__err">Required.</span></div>
+              <div class="field"><label for="o-dl">Driver’s license number</label><input class="input" id="o-dl" name="dl" autocomplete="off" data-sensitive></div>
+              <div class="field"><label for="o-credit">Estimated credit score</label><select class="select" id="o-credit" name="credit"><option value="">Please select</option><option>750+</option><option>700–749</option><option>650–699</option><option>600–649</option><option>550–599</option><option>Below 550</option><option>Not sure</option></select></div>
+              <div class="field span-2"><label for="o-addr">Home address <span class="req">*</span></label><input class="input" id="o-addr" name="owner_address" required autocomplete="home street-address"><span class="field__err">Required.</span></div>
+            </div>
+            <div class="grid-3" style="margin-top:18px">
+              <div class="field"><label for="o-city">City <span class="req">*</span></label><input class="input" id="o-city" name="owner_city" required><span class="field__err">Required.</span></div>
+              <div class="field"><label for="o-state">State <span class="req">*</span></label><select class="select" id="o-state" name="owner_state" required data-states></select><span class="field__err">Required.</span></div>
+              <div class="field"><label for="o-zip">ZIP <span class="req">*</span></label><input class="input" id="o-zip" name="owner_zip" required inputmode="numeric" maxlength="5" pattern="\d{5}"><span class="field__err">5-digit ZIP.</span></div>
+            </div>
+          </fieldset>
+
+          <!-- Step 3: Funding -->
+          <fieldset class="fstep" data-step="2" style="border:0;padding:0;margin:0">
+            <div class="fstep__head"><span class="eyebrow">Step 3 of 4</span><h2>💰 Funding request</h2><p>How much you need and a snapshot of your finances.</p></div>
+            <div class="grid-2">
+              <div class="field"><label for="f-amt">Requested funding amount <span class="req">*</span></label><div class="input-wrap"><span class="prefix">$</span><input class="input" id="f-amt" name="amount" required inputmode="numeric" data-mask="money" placeholder="250,000"></div><span class="field__err">Enter an amount of at least $5,000.</span></div>
+              <div class="field"><label for="f-use">What will you use the funds for? <span class="req">*</span></label><select class="select" id="f-use" name="use" required><option value="">Please select</option><option value="growth">Growth &amp; expansion</option><option value="operations">Operations &amp; cash flow</option><option value="equipment">Equipment &amp; upgrades</option><option value="inventory">Inventory</option><option value="payroll">Payroll</option><option value="refinance">Refinance existing debt</option><option value="other">Other</option></select><span class="field__err">Please choose one.</span></div>
+              <div class="field"><label for="f-rev">Estimated gross annual revenue <span class="req">*</span></label><div class="input-wrap"><span class="prefix">$</span><input class="input" id="f-rev" name="annual_revenue" required inputmode="numeric" data-mask="money" placeholder="1,200,000"></div><span class="field__err">Required.</span></div>
+              <div class="field"><label for="f-bal">Average bank balance</label><div class="input-wrap"><span class="prefix">$</span><input class="input" id="f-bal" name="avg_balance" inputmode="numeric" data-mask="money" placeholder="40,000"></div></div>
+              <div class="field"><span class="label" id="jl-l">Any open judgments, bankruptcy or tax liens? <span class="req">*</span></span><div class="radio-cards" role="radiogroup" aria-labelledby="jl-l"><label class="radio-card"><input type="radio" name="judgments" value="Yes" required><span>Yes</span></label><label class="radio-card"><input type="radio" name="judgments" value="No"><span>No</span></label></div><span class="field__err">Please choose one.</span></div>
+              <div class="field"><span class="label" id="erc-l">Have you applied for the ERC grant?</span><div class="radio-cards" role="radiogroup" aria-labelledby="erc-l"><label class="radio-card"><input type="radio" name="erc" value="Yes"><span>Yes</span></label><label class="radio-card"><input type="radio" name="erc" value="No"><span>No</span></label></div></div>
+              <div class="field span-2"><span class="label" id="adv-l">Do you have a current advance balance?</span><div class="radio-cards" role="radiogroup" aria-labelledby="adv-l" style="max-width:360px"><label class="radio-card"><input type="radio" name="has_advance" value="Yes" data-reveal="#advance-more"><span>Yes</span></label><label class="radio-card"><input type="radio" name="has_advance" value="No" data-reveal="#advance-more" data-reveal-off><span>No</span></label></div></div>
+            </div>
+            <div class="grid-2" id="advance-more" hidden style="margin-top:18px">
+              <div class="field"><label for="f-advbal">Current advance balance</label><div class="input-wrap"><span class="prefix">$</span><input class="input" id="f-advbal" name="advance_balance" inputmode="numeric" data-mask="money"></div></div>
+              <div class="field"><label for="f-advpay">Daily payment of current advance</label><div class="input-wrap"><span class="prefix">$</span><input class="input" id="f-advpay" name="advance_daily" inputmode="numeric" data-mask="money"></div></div>
+              <div class="field"><label for="f-advwith">Current advance held with</label><input class="input" id="f-advwith" name="advance_with"></div>
+              <div class="field"><label for="f-advdate">Funding date of current advance</label><input class="input" id="f-advdate" name="advance_date" type="date"></div>
+            </div>
+            <div class="fstep__group">
+              <h3>Upload bank / credit card statements</h3>
+              <label class="dropzone" id="dropzone">
+                <input type="file" id="f-files" name="statements" multiple accept=".pdf,.png,.jpg,.jpeg,.heic,.csv,.xlsx">
+                {{i:upload}}
+                <div><b>Drop your last 3–6 months of statements</b> or click to browse</div>
+                <div style="font-size:13px;margin-top:6px">PDF, image or spreadsheet · up to 25 MB each</div>
+              </label>
+              <div class="files" id="file-list"></div>
+              <p class="field__hint" style="margin-top:10px">Uploading statements now is optional, but it’s the fastest way to a decision.</p>
+            </div>
+          </fieldset>
+
+          <!-- Step 4: Review & sign -->
+          <fieldset class="fstep" data-step="3" style="border:0;padding:0;margin:0">
+            <div class="fstep__head"><span class="eyebrow">Step 4 of 4</span><h2>✍️ Review &amp; sign</h2><p>Double-check your details, then sign to submit.</p></div>
+            <div class="review" id="review"></div>
+            <div class="fstep__group">
+              <h3>Acknowledgment &amp; signature</h3>
+              <div class="legal-box" tabindex="0" aria-label="Application acknowledgment">
+                <p>By signing this document, each of the above listed business and business owner(s)/officer(s) (individually and collectively, “you”) certify that you are authorized to sign on behalf of the named business, and all such information may be relied upon by Fidelity Funding Group LLC (“Fidelity”) and the Recipients (defined below). You hereby authorize Fidelity and each of its representatives, successors, assigns, designees, and third-party funding partners, which includes lenders and other finance providers with whom Fidelity has, or may in the future enter into, commercial brokerage-financing relationships (“Recipients”):</p>
+                <ul>
+                  <li>to obtain credit and employment information about the Signers;</li>
+                  <li>to obtain consumer or personal, business, and investigative reports and other information about you, including hard and/or soft credit pulls, from one or more consumer reporting agencies, such as TransUnion, Experian, and Equifax;</li>
+                  <li>to obtain the release, by any creditor or financial institution, of any information relating to you, to any Recipients;</li>
+                  <li>to transmit this application form, along with any of the foregoing information obtained in connection with this application, to any or all Recipients for the foregoing purposes.</li>
+                </ul>
+                <p>Each Signer acknowledges that additional information may be required in order to render a decision regarding Business Applicant’s account, and Signers hereby certify that they have read and understand the terms of this Fidelity Funding Application Form.</p>
+                <p>EACH SIGNER ACKNOWLEDGES THAT FIDELITY FUNDING MAY RELY ON THE STATEMENTS AND INFORMATION SET FORTH IN THIS APPLICATION AND THAT SUCH STATEMENTS AND INFORMATION MAY BE INCORPORATED BY REFERENCE IN ANY AGREEMENT ANY OF THE UNDERSIGNED MAY ENTER INTO WITH FIDELITY FUNDING. EACH OF THE UNDERSIGNED HEREBY AGREES TO NOTIFY FIDELITY FUNDING PROMPTLY OF ANY CHANGE IN ANY SUCH STATEMENT OR INFORMATION. EACH SIGNER HAS READ AND UNDERSTANDS THE TERMS OF THIS APPLICATION, INCLUDING ANY ADDENDUM, AND REPRESENTS AND WARRANTS THAT THE INFORMATION CONTAINED HEREIN IS TRUE AND CORRECT.</p>
+                <p>By signing this application, you confirm you’re authorized to act on behalf of the business and that all information provided may be relied upon by Fidelity Funding Group LLC and its funding partners. You authorize them to obtain your credit, employment, and investigative reports; request information from financial institutions; and share your application and related data with funding partners. You understand additional information may be required and agree to notify Fidelity of any changes. You acknowledge that your information may be used in future agreements. You also consent to being contacted via email, phone, or text (including automated systems), even if you’re on a Do-Not-Call list. This consent is not required to use Fidelity’s services.</p>
+              </div>
+              <div class="grid-2" style="margin-top:20px">
+                <div class="field span-2"><label for="s-name">Applicant full printed name <span class="req">*</span></label><input class="input" id="s-name" name="printed_name" required autocomplete="name"><span class="field__err">Please type your full name.</span></div>
+                <div class="field span-2"><span class="label">Owner signature <span class="req">*</span></span>
+                  <div class="sig" id="sig"><canvas id="sig-canvas" aria-label="Signature pad — draw your signature"></canvas><span class="sig__ph" id="sig-ph">Sign here with your mouse or finger</span><button class="sig__clear" type="button" id="sig-clear">Clear</button></div>
+                  <span class="field__err" id="sig-err">Please sign above.</span></div>
+              </div>
+              <label class="check" style="margin-top:20px"><input type="checkbox" name="sms_consent"><span>By checking this box, you agree to receive text messages (e.g., payment reminders) from FIDELITY FUNDING at the cell number used when signing up. Consent is not a condition of any purchase. Reply STOP to unsubscribe, HELP for help. Message &amp; data rates may apply. Message frequency varies. I have read and agree with the <a href="/terms-and-conditions/" style="color:var(--blue)">Terms and Conditions</a> &amp; <a href="/privacy-policy/" style="color:var(--blue)">Privacy Policy</a>.</span></label>
+              <div class="field" style="margin-top:14px"><label class="check"><input type="checkbox" name="agree" required id="s-agree"><span>I have read the acknowledgment above and certify the information in this application is true and correct. <span class="req">*</span></span></label><span class="field__err">Please confirm to continue.</span></div>
+            </div>
+          </fieldset>
+
+          <div class="form-nav" id="form-nav">
+            <button class="btn btn--ghost" type="button" id="btn-back" hidden>{{i:chev-l}} Back</button>
+            <span class="save" id="save-state">{{i:lock}} Secure &amp; encrypted</span>
+            <button class="btn btn--primary btn--lg" type="submit" id="btn-next">Continue {{i:arrow}}</button>
+          </div>
+        </form>
+
+        <div class="success" id="apply-success" hidden>
+          <div class="success__check"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></div>
+          <h2 class="h2">You’re all set.</h2>
+          <p id="success-msg">Thanks! A Fidelity funding specialist will review your application and reach out shortly — often within hours.</p>
+          <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap"><a class="btn btn--primary btn--lg" href="/">Back to home</a><a class="btn btn--ghost btn--lg" href="tel:+12126349121">{{i:phone}} Call a specialist</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
